@@ -17,6 +17,34 @@ public class BST implements ListInterface
     @Override
     public void add(String word)
     {
+BSTNode current = root;
+BSTNode parent = null;
+
+while (current != null){
+    parent = current;
+    keyCompare++;
+
+    int comparison = word.compareTo(current.getWord());
+
+    if (comparison == 0){
+current.incrementCount();
+return;
+
+    }
+
+    else if( comparison < 0){
+
+        current = current.getLeft();
+    }
+
+    else{
+
+        current = current.getRight();
+    }
+
+    
+}
+
 
     }
 
