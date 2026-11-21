@@ -69,8 +69,10 @@ else
     public BSTNode minimum(BSTNode x)
     {
 
-        return x;
-    }
+if ( x== null){ return null;}
+while (x.getLeft() != null){x = x.getLeft();}
+return x;
+}
 
 
     public BSTNode successor(BSTNode x)
