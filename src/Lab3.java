@@ -1,6 +1,6 @@
-// Lab3.java - Driver for Lab 3 (More Lists)
-// Evan Schakel - 11/21/2026
-// Runs warmup, overhead, and List3, SkipList, Hash1, Hash2, Hash3, and BST on a text file.
+
+
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,7 +11,7 @@ public class Lab3
     private static Scanner input = null;
     private static final String PUNCTUATION = "!@#$%^&*()_+-=[]\\{}|;:'\"`~,./<>?";
 
-    // main entry point (must be first method in Lab3)
+
     public static void main(String[] args)
     {
         String fileName = (args.length == 0) ? "Hamlet.txt" : args[0];
@@ -26,11 +26,11 @@ public class Lab3
             }
         }
 
-        // old lists from project 2 kept commented out
-        // ListInterface l1 = new List1();
-        // ListInterface l2 = new List2();
-        // ListInterface l2a = new List2A();
-        // ListInterface l4 = new List4();
+
+
+
+
+
 
         ListInterface[] Lists = new ListInterface[6];
         Lists[0] = new List3();

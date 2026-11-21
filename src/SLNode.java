@@ -1,6 +1,6 @@
-// SLNode.java - Quad-linked node for SkipList
-// Evan Schakel - 11/21/2026
-// Holds a word, count, sentinel flag, and up/down/left/right links.
+
+
+
 
 public class SLNode
 {
@@ -12,7 +12,7 @@ public class SLNode
     private SLNode left;
     private SLNode right;
 
-    // constructor for sentinel nodes (-inf and +inf)
+
     public SLNode(boolean isSentinel)
     {
         this.word = null;
@@ -24,7 +24,7 @@ public class SLNode
         this.right = null;
     }
 
-    // constructor for data nodes
+
     public SLNode(String word)
     {
         this.word = word;

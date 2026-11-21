@@ -1,6 +1,4 @@
-// BSTNode.java - Node class for Binary Search Tree
-// Evan Schakel - 11/21/2026
-// Holds word, count, and left/right/parent links.
+
 
 public class BSTNode
 {
