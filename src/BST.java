@@ -77,8 +77,25 @@ return x;
 
     public BSTNode successor(BSTNode x)
     {
+        if (x == null)
+        {
+            return null;
+        }
 
-        return null;
+        if (x.getRight() != null)
+        {
+            return minimum(x.getRight());
+        }
+
+        BSTNode parent = x.getParent();
+
+        while (parent != null && x == parent.getRight())
+        {
+            x = parent;
+            parent = parent.getParent();
+        }
+
+        return parent;
     }
 
     public int getHeight()
