@@ -1,4 +1,4 @@
-# Word Frequency Analyzer - Project 3
+# Word Frequency Analyzer - More Lists
 
 This project builds on Project 2 (`sortingProject`) by adding five new data structures to compare against the previous linked-list implementations on larger text files:
 
