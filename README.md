@@ -1,28 +1,31 @@
-# Word Frequency Analyzer
+# Word Frequency Analyzer - Project 3
 
-This project reads a text file, tracks how often each word appears, and compares several linked-list approaches for storing and finding words.
+This project builds on Project 2 (`sortingProject`) by adding five new data structures to compare against the previous linked-list implementations on larger text files:
 
-Each approach records useful performance data, including:
+- **Skip List** (`SkipList` / `SLNode`)
+- **Three 256-Bucket Hash Tables** (`Hash1`, `Hash2`, `Hash3`) using `List3` move-to-front chaining
+- **Binary Search Tree** (`BST` / `BSTNode`)
 
-- Number of unique words
+Each structure tracks:
+
+- Distinct words (vocabulary)
 - Total word count
-- Word comparisons
+- Key comparisons
 - Reference changes
-- Processing time
-
-The results show how different data structures and search strategies affect performance when working with text data.
+- Run time
+- Structure height (`h`, for Skip List and BST)
 
 ## Project Structure
 
-- `src/MainClass.java`: Reads the input file, runs the analysis, and displays results
-- `src/ListInterface.java`: Defines the shared list operations and performance metrics
-- `src/BaseList.java`: Provides common list fields and reporting methods
-- `src/LLNode.java`: Represents a word, its count, and its next link
-- `src/List1.java`: Unsorted list with new words added to the front
-- `src/List2.java`: Alphabetically sorted list
-- `src/List2A.java`: Sorted list with an optimized search starting point
-- `src/List3.java`: Self-adjusting list that moves repeated words to the front
-- `src/List4.java`: Self-adjusting list that moves repeated words forward one position
+- `src/Lab3.java`: Main driver (`main()` first) that runs `List3`, `SkipList`, `Hash1`, `Hash2`, `Hash3`, and `BST`
+- `src/ListInterface.java`: Shared interface for all list, hash table, and tree structures
+- `src/BaseList.java` & `src/LLNode.java`: Base linked list and node classes from Project 2
+- `src/List1.java` – `src/List4.java`: Original five linked lists from Project 2 (`List3` kept active as baseline)
+- `src/SLNode.java` & `src/SkipList.java`: Quad-linked node (`isSentinel` flag) and multi-lane skip list
+- `src/Hash1.java`: 256-bucket hash table (ASCII character sum `% 256`)
+- `src/Hash2.java`: 256-bucket hash table (first character ASCII value)
+- `src/Hash3.java`: 256-bucket hash table (8-bit rolling polynomial hash)
+- `src/BSTNode.java` & `src/BST.java`: Binary search tree node (`left`, `right`, `parent`) and iterative BST
 
 ## Running the Project
 
@@ -35,7 +38,5 @@ javac -d bin src/*.java
 Run the analyzer with a text file:
 
 ```bash
-java -cp bin MainClass Hamlet.txt
+java -cp bin Lab3 Hamlet.txt
 ```
-
-The input file can be replaced with any other text file.

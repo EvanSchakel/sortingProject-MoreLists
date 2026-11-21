@@ -9,9 +9,10 @@ out/
 !.vscode/settings.json
 !.vscode/extensions.json
 
-# Archives
+# Archives and test text files
 *.7z
 *.zip
 *.tar.gz
+*.txt
 .idea/
 *.iml
