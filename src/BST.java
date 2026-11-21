@@ -44,11 +44,28 @@ return;
 
     
 }
+BSTNode newNode = new BSTNode(word);
 
+if (parent == null){
 
+    root = newNode;
+    refChanges++;
+
+}
+else if (word.compareTo(parent.getWord()) < 0)
+    {
+     parent.setLeft(newNode);
+     newNode.setParent(parent);
+     refChanges += 2;
+    }
+else
+    {
+        parent.setRight(newNode);
+        newNode.setParent(parent);
+        refChanges += 2;
     }
 
-
+}
     public BSTNode minimum(BSTNode x)
     {
 
